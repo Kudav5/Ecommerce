@@ -1,9 +1,11 @@
-package id.co.ecommerce;
+package id.co.ecommerce
 
-import id.co.ecommerce.model.Dataitem;
+import android.view.View
+import android.view.ViewGroup
+import id.co.ecommerce.model.Dataitem
 
-public class UserAdapter(private val users: MutableList<Dataitem>) :
-        RecycleView.Adapter<UserAdapter.ListViewHolder>() {
+class UserAdapter(private val users: MutableList<Dataitem>) {
+    RecyclerView.Adapter<UserAdapter.ListViewHolder>() {
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
             val view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_list_user, parent, false)
             return ListViewHolder {
@@ -27,13 +29,13 @@ public class UserAdapter(private val users: MutableList<Dataitem>) :
             val user = users[position]
 
             Glide.with(holder.itemView.context)
-        .load(user.avatar)
-        .apply(RequestOptions().override(80,80).placeholder(R.drawable.icon_avatar))
-        .transform(CircleCrop())
-        .into(holder.ivAvatar)
+                    .load(user.avatar)
+                    .apply(RequestOptions().override(80,80).placeholder(R.drawable.icon_avatar))
+                    .transform(CircleCrop())
+                    .into(holder.ivAvatar)
 
-        holder.tvUserName.text = "${user.firstName} ${user.lastName}"
-        holder.tvEmail.text = user.email
+            holder.tvUserName.text = "${user.firstName} ${user.lastName}"
+            holder.tvEmail.text = user.email
 
         }
 
@@ -41,5 +43,7 @@ public class UserAdapter(private val users: MutableList<Dataitem>) :
 
         }
 
+
+    }
 
 }

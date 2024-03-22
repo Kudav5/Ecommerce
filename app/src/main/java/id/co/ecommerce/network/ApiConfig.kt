@@ -1,19 +1,18 @@
-package id.co.ecommerce.network;
+package id.co.ecommerce.network
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class ApiConfig {
+class ApiConfig {
     companion object {
         fun getApiService(): ApiService {
-            val loggingInterceptor = new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
-            val client = new OkHttpClient.Builder()
+            val loggingInterceptor = HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
+            val client = OkHttpClient.Builder()
                     .addInterceptor(loggingInterceptor)
                     .build()
-
-            val retrofit = new Retrofit.Builder()
+            val retrofit = Retrofit.Builder()
                     .baseUrl("https://reqres.in/")
                     .addConverterFactory(GsonConverterFactory.create())
                     .build()
@@ -25,3 +24,6 @@ public class ApiConfig {
 private fun getUser() {
     val client = ApiConfig.getApiService().getListUsers("1")
 }
+
+
+

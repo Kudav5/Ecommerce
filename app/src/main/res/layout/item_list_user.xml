@@ -17,6 +17,7 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
+        android:id="@+id/itemName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -25,5 +26,7 @@
         app:layout_constraintStart_toStartOf="@+id/itemName"
         app:layout_constraintBottom_toBottomOf="@+id/itemName"
         tools:text="Email" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
