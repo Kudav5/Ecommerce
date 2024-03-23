@@ -1,9 +1,9 @@
 package id.co.ecommerce.network
 
-import okhttp3.OkHttpClient;
-import okhttp3.logging.HttpLoggingInterceptor;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
+import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 class ApiConfig {
     companion object {
@@ -13,10 +13,10 @@ class ApiConfig {
                     .addInterceptor(loggingInterceptor)
                     .build()
             val retrofit = Retrofit.Builder()
-                    .baseUrl("https://reqres.in/")
+                    .baseUrl("https://reqres.in/api/users?page=1") // aslinya param "https://reqres.in/"
                     .addConverterFactory(GsonConverterFactory.create())
                     .build()
-            return retrofit.create(ApiService::class.java);
+            return retrofit.create(ApiService::class.java)
         }
     }
 }

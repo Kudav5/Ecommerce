@@ -10,7 +10,7 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_margin="16dp"
-        android:contentDescription="Avatar"
+        android:contentDescription="@string/Avatar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -20,13 +20,23 @@
         android:id="@+id/itemName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:textColor="#000"
+        android:textSize="22sp"
+        app:layout_constraintStart_toEndOf="@id/itemAvatar"
+        app:layout_constraintTop_toTopOf="@id/itemAvatar"
+        tools:text="Name" />
+
+    <TextView
+        android:id="@+id/itemEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:textColor="#7e7e7e"
+        android:textColor="#7E7E7E"
         android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/itemName"
-        app:layout_constraintBottom_toBottomOf="@+id/itemName"
-        tools:text="Email" />
-
-
+        app:layout_constraintStart_toStartOf="@id/itemName"
+        app:layout_constraintTop_toBottomOf="@id/itemName"
+        tools:text="Email"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
