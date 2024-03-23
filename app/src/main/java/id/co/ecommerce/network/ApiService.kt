@@ -1,10 +1,11 @@
 package id.co.ecommerce.network
 
-import id.co.ecommerce.model.ResponseUser;
+import id.co.ecommerce.model.ResponseUser
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
-import retrofit2.Call;
+import retrofit2.Call
 import retrofit2.http.*
+import retrofit2.http.GET
 
 interface ApiService {
     @GET("api/users")
@@ -20,4 +21,5 @@ interface ApiService {
     @Multipart
     @PUT("api/uploadfile")
     fun updateUser(@Part("file") file: MultipartBody.Part, @PartMap data: Map<String, RequestBody>): Call<ResponseUser>
+
 }

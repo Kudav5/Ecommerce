@@ -5,6 +5,7 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
+
 class ApiConfig {
     companion object {
         fun getApiService(): ApiService {
@@ -13,7 +14,7 @@ class ApiConfig {
                     .addInterceptor(loggingInterceptor)
                     .build()
             val retrofit = Retrofit.Builder()
-                    .baseUrl("https://reqres.in/api/users?page=1") // aslinya param "https://reqres.in/"
+                    .baseUrl("https://reqres.in/")
                     .addConverterFactory(GsonConverterFactory.create())
                     .build()
             return retrofit.create(ApiService::class.java)
@@ -24,6 +25,3 @@ class ApiConfig {
 private fun getUser() {
     val client = ApiConfig.getApiService().getListUsers("1")
 }
-
-
-
