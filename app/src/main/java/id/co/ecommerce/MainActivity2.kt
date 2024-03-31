@@ -1,7 +1,10 @@
 package id.co.ecommerce
 
+import android.graphics.Rect
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.TypedValue
+import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import android.widget.Toast
@@ -32,16 +35,20 @@ class MainActivity2 : AppCompatActivity() {
         rv_users.layoutManager = LinearLayoutManager(this)
         rv_users.adapter = adapter
         getUser()
+
+
     }
     private fun getUser() {
         val client = ApiConfig.getApiService().getListUsers("1")
-
         client.enqueue(object: Callback<ResponseUser> {
+
             override fun onResponse(call: Call<ResponseUser>, response: Response<ResponseUser>) {
                 if (response.isSuccessful) {
                     val dataArray = response.body()?.data as List<Dataitem> // ?: emptyList()
+
                     for (data in dataArray) {
                         adapter.addUser(data)
+                        println(data.toString())    // ngetes
                     }
                 }
             }
@@ -52,4 +59,5 @@ class MainActivity2 : AppCompatActivity() {
             }
         })
     }
+
 }
