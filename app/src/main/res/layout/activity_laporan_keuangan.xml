@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <!-- activity_main.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:padding="16dp"
+tools:context=".laporan_keuangan">
+
+<ImageView
+    android:id="@+id/imageView"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:src="@drawable/ic_launcher_background"
+    android:scaleType="centerCrop"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginBottom="16dp"/>
+
+<TextView
+    android:id="@+id/textViewNamadepan"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Nama Depan: "
+    android:textSize="18sp"
+    android:layout_marginBottom="8dp"/>
+
+<TextView
+    android:id="@+id/textViewNamabelakang"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Nama Belakang: "
+    android:textSize="18sp"
+    android:layout_marginBottom="8dp"/>
+
+<TextView
+    android:id="@+id/textViewEmail"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Email: "
+    android:textSize="18sp"
+    android:layout_marginBottom="8dp"/>
+
+<TextView
+    android:id="@+id/textViewAlamat"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Alamat Rumah: "
+    android:textSize="18sp"
+    android:layout_marginBottom="8dp"/>
+
+<TextView
+    android:id="@+id/textViewIuran"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Jumlah iuran bulanan warga: "
+    android:textSize="18sp"
+    android:layout_marginBottom="8dp"/>
+
+<TextView
+    android:id="@+id/textViewTotalIuran"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Total iuran individu warga: "
+    android:textSize="18sp"
+    android:layout_marginBottom="8dp"/>
+
+<TextView
+    android:id="@+id/textViewTotalRekap"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Total iuran warga pada akhir\nrekap iuran bulanan: "
+    android:textSize="18sp"
+    android:layout_marginBottom="8dp"/>
+
+<TextView
+    android:id="@+id/textViewPengeluaran"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Pengeluaran iuran dari hasil\niuran warga: "
+    android:textSize="18sp"
+    android:layout_marginBottom="8dp"/>
+
+<TextView
+    android:id="@+id/textViewPemanfaatan"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Pemanfaatan dari iuran warga\nuntuk apa saja: "
+    android:textSize="18sp"/>
+
+</LinearLayout>

@@ -46,6 +46,7 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'  // aslinya 2.6.4
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0' // aslinya 2.6.4
 
+    implementation 'com.android.volley:volley:1.2.1' // tambahkan ini untuk api spreaddsheet
 
     implementation 'com.squareup.okhttp3:logging-interceptor:3.8.0'
     debugImplementation "com.github.chuckerteam.chucker:library:3.3.0"
