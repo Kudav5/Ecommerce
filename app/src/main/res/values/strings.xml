@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Ecommerce</string>
     <string name="Avatar">Avatar</string>
+    <string name="orang">orang</string>
+    <string name="api">api</string>
+    <string name="dashboard">Dashboard</string>
 </resources>

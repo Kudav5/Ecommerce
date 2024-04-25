@@ -14,13 +14,16 @@
         android:theme="@style/Theme.Ecommerce"
         tools:targetApi="34">
         <activity
+            android:name=".laporan_keuangan"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity2"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".laporan_keuangan"
+            android:name=".layarUtama"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
