@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "113093168301",
+    "project_id": "kasrt-e3e42",
+    "storage_bucket": "kasrt-e3e42.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:113093168301:android:d160c86da528d3ef89ca24",
+        "android_client_info": {
+          "package_name": "id.co.ecommerce"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLOwaHJT5wjGC8XuAz2IXi8F6AjMPJ3N0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
