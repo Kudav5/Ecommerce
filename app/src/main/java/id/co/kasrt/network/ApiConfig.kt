@@ -1,4 +1,4 @@
-package id.co.ecommerce.network
+package id.co.kasrt.network
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

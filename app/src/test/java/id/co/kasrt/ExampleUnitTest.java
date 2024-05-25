@@ -1,4 +1,4 @@
-package id.co.ecommerce;
+package id.co.kasrt;
 
 import org.junit.Test;
 

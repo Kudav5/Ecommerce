@@ -1,15 +1,25 @@
-package id.co.ecommerce
+package id.co.kasrt
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
+import com.google.firebase.messaging.FirebaseMessaging
+
 
 class layarUtama : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_layar_utama)
+
+        FirebaseMessaging.getInstance().subscribeToTopic("Laporan")
+            .addOnCompleteListener { task ->
+                var msg = "Done"
+                if (!task.isSuccessful) {
+                    msg = "Failed"
+                }
+            }
 
         val cardView_orang: CardView = findViewById(R.id.orang)
         val cardView_api: CardView = findViewById(R.id.api)

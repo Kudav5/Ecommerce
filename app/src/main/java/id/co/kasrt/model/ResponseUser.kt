@@ -1,4 +1,4 @@
-package id.co.ecommerce.model
+package id.co.kasrt.model
 
 import com.google.gson.annotations.SerializedName
 

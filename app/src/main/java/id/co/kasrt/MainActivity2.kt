@@ -1,16 +1,13 @@
-package id.co.ecommerce
+package id.co.kasrt
 
-import android.graphics.Rect
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.TypedValue
-import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import android.widget.Toast
-import id.co.ecommerce.model.Dataitem
-import id.co.ecommerce.model.ResponseUser
-import id.co.ecommerce.network.ApiConfig
+import id.co.kasrt.model.Dataitem
+import id.co.kasrt.model.ResponseUser
+import id.co.kasrt.network.ApiConfig
 
 // call retrofit
 import retrofit2.Call

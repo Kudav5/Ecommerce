@@ -1,6 +1,6 @@
-package id.co.ecommerce.network
+package id.co.kasrt.network
 
-import id.co.ecommerce.model.ResponseUser
+import id.co.kasrt.model.ResponseUser
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.Call

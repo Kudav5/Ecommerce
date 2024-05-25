@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace 'id.co.ecommerce'
+    namespace 'id.co.kasrt'
     compileSdk 34
 
     defaultConfig {
-        applicationId "id.co.ecommerce"
+        applicationId "id.co.kasrt"
         minSdk 21
         targetSdk 34
         versionCode 1
@@ -60,4 +60,6 @@ dependencies {
 
     implementation(platform("com.google.firebase:firebase-bom:32.8.1"))
     implementation("com.google.firebase:firebase-analytics")
+
+    implementation 'com.google.firebase:firebase-messaging:24.0.0'
 }
