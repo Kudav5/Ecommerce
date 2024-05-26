@@ -5,12 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".layarUtama">
-    
-    <View
-        android:id="@+id/top_View"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="@drawable/bg_view"/>
+
+        <View
+            android:id="@+id/top_View"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@drawable/bg_gelombang"/>
+
+    <TextClock
+        android:id="@+id/jam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_clock"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:textSize="36sp"
+        android:format24Hour="hh:mm:ss a"
+        android:layout_marginTop="50dp" />
 
     <GridLayout
         android:layout_width="match_parent"
@@ -19,7 +31,7 @@
         android:columnCount="2"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="25dp"
-        android:layout_marginTop="-80dp"
+        android:layout_marginTop="-70dp"
         android:layout_below="@+id/top_View">
 
         <androidx.cardview.widget.CardView
@@ -53,6 +65,36 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/orwang"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:cardCornerRadius="15dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="1"
+            android:layout_column="1"
+            app:cardElevation="12dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_akun"
+                    android:layout_gravity="center_horizontal"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
             android:id="@+id/api"
             android:layout_width="150dp"
             android:layout_height="150dp"
@@ -62,6 +104,7 @@
             android:layout_row="0"
             android:layout_column="1"
             app:cardElevation="12dp">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -82,16 +125,9 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
+
     </GridLayout>
-    <TextView
-        android:id="@+id/dashboard"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/dashboard"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:textSize="36sp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"/>
+
+
 
 </RelativeLayout>

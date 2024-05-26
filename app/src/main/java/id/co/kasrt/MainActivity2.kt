@@ -45,7 +45,7 @@ class MainActivity2 : AppCompatActivity() {
 
                     for (data in dataArray) {
                         adapter.addUser(data)
-                        println(data.toString())    // ngetes
+                        println(data.toString())
                     }
                 }
             }

@@ -5,4 +5,7 @@
     <string name="api">api</string>
     <string name="dashboard">Dashboard</string>
     <string name="tampilkan">tampilkan</string>
+    <string name="text_clock">Text Clock</string>
+    <string name="example_name">Android Studio</string>
+    <string name="example_mail">android.studio@android.com</string>
 </resources>

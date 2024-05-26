@@ -2,10 +2,12 @@ package id.co.kasrt
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.google.firebase.messaging.FirebaseMessaging
+import java.lang.reflect.Modifier
 
 
 class layarUtama : AppCompatActivity() {
@@ -20,7 +22,7 @@ class layarUtama : AppCompatActivity() {
                     msg = "Failed"
                 }
             }
-
+        val topView: View = findViewById(R.id.top_View)
         val cardView_orang: CardView = findViewById(R.id.orang)
         val cardView_api: CardView = findViewById(R.id.api)
 
@@ -38,4 +40,6 @@ class layarUtama : AppCompatActivity() {
     private fun showToast(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
+
+
 }
