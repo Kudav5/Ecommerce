@@ -28,7 +28,6 @@
         app:itemBackground="@color/pastel_orange"
         app:itemIconTint="@color/pastel_green"
         app:itemTextColor="@color/pastel_blue"
-
         app:labelVisibilityMode="labeled" />
 
 </RelativeLayout>
