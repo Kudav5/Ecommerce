@@ -23,16 +23,26 @@ class layarUtama : AppCompatActivity() {
                 }
             }
         val topView: View = findViewById(R.id.top_View)
-        val cardView_orang: CardView = findViewById(R.id.orang)
-        val cardView_api: CardView = findViewById(R.id.api)
+        val cardView_orang: CardView = findViewById(R.id.tambah)
+        val cardView_api: CardView = findViewById(R.id.lihat)
+        val cardView_ubah: CardView = findViewById(R.id.ubah)
+        val cardView_hapus: CardView = findViewById(R.id.hapus)
 
         cardView_orang.setOnClickListener {
-            val intent = Intent(this, MainActivity2::class.java)
+            val intent = Intent(this, add_data::class.java)
             startActivity(intent)
         }
 
         cardView_api.setOnClickListener {
             val intent = Intent(this, laporan_keuangan::class.java)
+            startActivity(intent)
+        }
+        cardView_ubah.setOnClickListener {
+            val intent = Intent(this, akun::class.java)
+            startActivity(intent)
+        }
+        cardView_hapus.setOnClickListener {
+            val intent = Intent(this, MainActivity2::class.java)
             startActivity(intent)
         }
     }

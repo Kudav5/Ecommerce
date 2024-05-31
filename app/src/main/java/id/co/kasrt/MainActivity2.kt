@@ -24,7 +24,6 @@ class MainActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
-
         adapter = UserAdapter(mutableListOf())
 
         val rv_users  = findViewById<RecyclerView>(R.id.rv_users)  // Buat val

@@ -8,4 +8,39 @@
     <string name="text_clock">Text Clock</string>
     <string name="example_name">Android Studio</string>
     <string name="example_mail">android.studio@android.com</string>
+
+    <!--CRUD-->
+    <string name="add">Tambah Data</string>
+    <string name="read">Lihat Data</string>
+    <string name="update">Ubah Data</string>
+    <string name="delete">Hapus Data</string>
+
+    <!--inputan-->
+    <string name="total_iuran_warga">Total iuran warga pada\nakhir rekap iuran bulanan</string>
+    <string name="pengeluaran_iuran_warga">Pengeluaran iuran dari hasil\niuran warga</string>
+    <string name="pemanfaatan_dari_iuran">Pemanfaatan dari iuran warga\nuntuk apa saja</string>
+    <string name="total_iuran_individu">Total iuran individu warga</string>
+    <string name="jumlah_iuran_bulanan_warga">Jumlah iuran bulanan warga</string>
+    <string name="alamat_rumah">Alamat Rumah</string>
+    <string name="email">Email</string>
+    <string name="nama_belakang">Nama Belakang</string>
+    <string name="nama_depan">Nama Depan</string>
+
+    <!--tombol CRUD-->
+    <string name="tambah">Tambah</string>
+    <string name="ubah">Ubah</string>
+    <string name="hapus">Hapus</string>
+
+    <!--login register-->
+    <string name="login">Login</string>
+    <string name="logingoogle">Login with Google</string>
+    <string name="register">Register</string>
+    <string name="signin">Sign In</string>
+    <string name="logout">Logout</string>
+    <string name="hello">Hello</string>
+
+    <string name="judul">Pengelolaan\nKeuangan RT</string>
+    <string name="deskripsi">Mengelola keuangan kas RT</string>
+
+
 </resources>
