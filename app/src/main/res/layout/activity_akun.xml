@@ -39,14 +39,14 @@
         android:text="@string/deskripsi"/>
 
     <Button
-        android:id="@+id/login"
+        android:id="@+id/logins"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/oval"
         android:layout_marginBottom="15dp"
         android:layout_marginEnd="40dp"
         android:layout_marginStart="40dp"
-        android:layout_above="@+id/register"
+        android:layout_above="@+id/regyster"
         android:fontFamily="sans-serif-medium"
         android:paddingLeft="24dp"
         android:paddingTop="10dp"
@@ -57,7 +57,7 @@
         android:textSize="18sp" />
 
     <Button
-        android:id="@+id/register"
+        android:id="@+id/regyster"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/oval"

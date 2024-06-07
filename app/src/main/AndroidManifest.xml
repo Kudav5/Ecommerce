@@ -14,11 +14,35 @@
         android:theme="@style/Theme.Ecommerce"
         tools:targetApi="34">
         <activity
-            android:name=".login"
+            android:name=".data_warga"
             android:exported="false" />
         <activity
-            android:name=".akun"
+            android:name=".hapus_data"
             android:exported="false" />
+        <activity
+            android:name=".ubah_data"
+            android:exported="false" />
+        <activity
+            android:name=".read_data"
+            android:exported="false" />
+        <activity
+            android:name=".Register"
+            android:exported="true" />
+        <activity
+            android:name=".contoh"
+            android:exported="true" />
+        <activity
+            android:name=".akun"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Login"
+            android:exported="true" />
         <activity
             android:name=".add_data"
             android:exported="false" />

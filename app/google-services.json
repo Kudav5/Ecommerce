@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "624327903423",
+    "firebase_url": "https://kasrt-2dab5-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "kasrt-2dab5",
     "storage_bucket": "kasrt-2dab5.appspot.com"
   },
@@ -12,7 +13,20 @@
           "package_name": "id.co.kasrt"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "624327903423-d4hka9b6e008ts4b59bjfk8pf5nin8h4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.co.kasrt",
+            "certificate_hash": "2e2f2abfe83b4123a7b51b858c11031745c307f4"
+          }
+        },
+        {
+          "client_id": "624327903423-nfdf0mksbatlciovi9aul96aiuave4vo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyC9I8RAPfbNZh_BLve0j-tNJ1XNWA7yTgY"
@@ -20,7 +34,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "624327903423-nfdf0mksbatlciovi9aul96aiuave4vo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

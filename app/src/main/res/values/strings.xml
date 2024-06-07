@@ -42,5 +42,14 @@
     <string name="judul">Pengelolaan\nKeuangan RT</string>
     <string name="deskripsi">Mengelola keuangan kas RT</string>
 
+    <string name="password">password</string>
+    <string name="pilih_login">ATAU LOGIN DENGAN</string>
+    <string name="buat_akun">ATAU BUAT AKUN DENGAN</string>
+    <string name="facebok">facebook</string>
+    <string name="google">google</string>
+
+    <string name="facebook_app_id">YOUR_FACEBOOK_APP_ID</string>
+    <string name="client_id">624327903423-d4hka9b6e008ts4b59bjfk8pf5nin8h4.apps.googleusercontent.com</string>
+    <string name="data_warga">Data Warga</string>
 
 </resources>

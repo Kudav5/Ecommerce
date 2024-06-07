@@ -6,6 +6,7 @@ import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.messaging.Constants.MessageNotificationKeys.TAG
@@ -29,29 +30,30 @@ class add_data : AppCompatActivity() {
 
         val kirim: Button = findViewById(R.id.kirim)
 
-        val laporan = hashMapOf(
-            "Nama Depan" to namdep,
-            "Nama Belakang" to nambel,
-            "Email" to email,
-            "Alamat Rumah" to alamat,
-            "Jumlah Iuran Bulanan" to iuran_bulanan,
-            "Total Iuran Individu" to iuran_individu,
-            "Total Iuran Akhir" to iuran_akhir,
-            "Pengeluaran Iuran" to pengeluaran,
-            "Pemanfaatan Iuran" to pemanfaatan
-        )
-
         kirim.setOnClickListener {
-            namdep.text.toString()
-            nambel.text.toString()
-            email.text.toString()
-            alamat.text.toString()
-            iuran_bulanan.text.toString()
-            iuran_individu.text.toString()
-            iuran_akhir.text.toString()
-            pengeluaran.text.toString()
-            pemanfaatan.text.toString()
+            val namaDepan = namdep.text.toString().trim()
+            val namaBelakang = nambel.text.toString().trim()
+            val emailText = email.text.toString().trim()
+            val alamatRumah = alamat.text.toString().trim()
 
+            val jumlahIuranBulanan = iuran_bulanan.text.toString().toIntOrNull() ?: 0
+            val totalIuranIndividu = iuran_individu.text.toString().toIntOrNull() ?: 0
+            val totalIuranAkhir = iuran_akhir.text.toString().toIntOrNull() ?: 0    // int
+            val pengeluaranIuran = pengeluaran.text.toString().toIntOrNull() ?: 0
+
+            val pemanfaatanIuran = pemanfaatan.text.toString().trim()
+
+            val laporan = hashMapOf(
+                "Nama Depan" to namaDepan,
+                "Nama Belakang" to namaBelakang,
+                "Email" to emailText,
+                "Alamat Rumah" to alamatRumah,
+                "Jumlah Iuran Bulanan" to jumlahIuranBulanan,
+                "Total Iuran Individu" to totalIuranIndividu,
+                "Total Iuran Akhir" to totalIuranAkhir,
+                "Pengeluaran Iuran" to pengeluaranIuran,
+                "Pemanfaatan Iuran" to pemanfaatanIuran
+            )
 
             // Add a new document with a generated ID
             db.collection("laporan")

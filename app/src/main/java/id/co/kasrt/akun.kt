@@ -3,6 +3,7 @@ package id.co.kasrt
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.Button
@@ -18,11 +19,10 @@ class akun : AppCompatActivity() {
         val rootView = window.decorView.findViewById<RelativeLayout>(R.id.root_layout)
         val blurView = findViewById<BlurView>(R.id.blurView)
 
-        val login: Button = findViewById(R.id.login)
-        val register: Button = findViewById(R.id.register)
+        val login: Button = findViewById(R.id.logins)
+        val register: Button = findViewById(R.id.regyster)
 
         val radius = 1f
-
         val windowBackground = window.decorView.background
 
         blurView.setupWith(rootView)
@@ -36,9 +36,8 @@ class akun : AppCompatActivity() {
             login.startAnimation(modulasi)
             register.startAnimation(modulasi)
 
-            val intent = Intent(this, login::class.java)
+            val intent = Intent(this, Login::class.java)
             startActivity(intent)
-
         }
 
         register.setOnClickListener {
@@ -46,7 +45,7 @@ class akun : AppCompatActivity() {
             login.startAnimation(modulasi)
             register.startAnimation(modulasi)
 
-            val intent = Intent(this, laporan_keuangan::class.java)
+            val intent = Intent(this, Register::class.java)
             startActivity(intent)
         }
     }

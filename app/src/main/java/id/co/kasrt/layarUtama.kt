@@ -34,15 +34,15 @@ class layarUtama : AppCompatActivity() {
         }
 
         cardView_api.setOnClickListener {
-            val intent = Intent(this, laporan_keuangan::class.java)
+            val intent = Intent(this, read_data::class.java)
             startActivity(intent)
         }
         cardView_ubah.setOnClickListener {
-            val intent = Intent(this, akun::class.java)
+            val intent = Intent(this, ubah_data::class.java)
             startActivity(intent)
         }
         cardView_hapus.setOnClickListener {
-            val intent = Intent(this, MainActivity2::class.java)
+            val intent = Intent(this, hapus_data::class.java)
             startActivity(intent)
         }
     }
