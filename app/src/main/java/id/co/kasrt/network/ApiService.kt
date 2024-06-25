@@ -1,5 +1,6 @@
 package id.co.kasrt.network
 
+import id.co.kasrt.SheetResponse
 import id.co.kasrt.model.ResponseUser
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
@@ -26,6 +27,8 @@ interface ApiService {
     @PUT("api/uploadfile")
     fun updateUser(@Part("file") file: MultipartBody.Part, @PartMap data: Map<String, RequestBody>): Call<ResponseUser>
 
+    //@GET("{spreadsheetId}")
+    //fun getSheetData(@Path("spreadsheetId") spreadsheetId: String): Call<SheetResponse>
 }
 
 

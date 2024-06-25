@@ -10,9 +10,48 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Ecommerce"
+        android:theme="@style/Theme.NavigationDrawer"
         tools:targetApi="34">
+        <activity
+            android:name=".wajah"
+            android:exported="false" />
+        <activity
+            android:name=".PembukuanKeuangan"
+            android:exported="false" />
+        <activity
+            android:name=".digitization"
+            android:exported="false" />
+        <activity
+            android:name=".payment"
+            android:exported="false" />
+        <activity
+            android:name=".PengelolaanLingkungan"
+            android:exported="false" />
+        <activity
+            android:name=".tombolPanik"
+            android:exported="false" />
+
+        <receiver
+            android:name=".BroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="id.co.kasrt.PANIC_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".NavSamping"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".settings"
+            android:exported="false" />
         <activity
             android:name=".data_warga"
             android:exported="false" />

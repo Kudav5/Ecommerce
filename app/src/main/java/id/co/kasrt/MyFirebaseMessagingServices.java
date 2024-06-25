@@ -8,9 +8,11 @@ import android.content.Intent;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
+import android.util.Log;
 
 import androidx.core.app.NotificationCompat;
 
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
@@ -18,6 +20,33 @@ public class MyFirebaseMessagingServices extends FirebaseMessagingService {
 
     private static final String TAG = "MyFirebaseMsgService";
 
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        // Mendapatkan token secara manual
+        getToken();
+    }
+
+    @Override
+    public void onNewToken(String token) {
+        super.onNewToken(token);
+        Log.d(TAG, "Device token: " + token);
+        // Simpan atau kirim token ke server Anda sesuai kebutuhan
+    }
+
+    private void getToken() {
+        FirebaseMessaging.getInstance().getToken().addOnCompleteListener(task -> {
+            if (!task.isSuccessful()) {
+                Log.w(TAG, "Fetching FCM registration token failed", task.getException());
+                return;
+            }
+
+            // Get new FCM registration token
+            String token = task.getResult();
+            Log.d(TAG, "Device token: " + token);
+            // Simpan atau kirim token ke server Anda sesuai kebutuhan
+        });
+    }
 
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
@@ -33,14 +62,13 @@ public class MyFirebaseMessagingServices extends FirebaseMessagingService {
         }
     }
 
-
     private void sendNotification(String title, String body) {
         Intent intent = new Intent(this, MainActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0 /* Request code */, intent,
                 PendingIntent.FLAG_IMMUTABLE);
 
-        String channelId = "fcm_default_channel";
+        String channelId = "fcm_bayar_iuran";
         Uri defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         NotificationCompat.Builder notificationBuilder =
                 new NotificationCompat.Builder(this, channelId)
@@ -62,6 +90,7 @@ public class MyFirebaseMessagingServices extends FirebaseMessagingService {
             notificationManager.createNotificationChannel(channel);
         }
 
+        int notificationId = (int) System.currentTimeMillis();
         notificationManager.notify(0 /* ID of notification */, notificationBuilder.build());
     }
 

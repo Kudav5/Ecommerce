@@ -1,13 +1,14 @@
 package id.co.kasrt
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.EditText
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-import com.google.firebase.messaging.Constants.MessageNotificationKeys.TAG
+import com.google.firebase.messaging.FirebaseMessaging
+import com.google.firebase.messaging.RemoteMessage
+import okhttp3.*
 
 class read_data : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -54,11 +55,36 @@ class read_data : AppCompatActivity() {
                     pengeluaran.text = "Pengeluaran iuran dari hasil\niuran warga: $pengeluaranIuran"
                     iuran_individu.text = "Total Iuran Individu warga: $totalIuranIndividu"
                     iuran_akhir.text = "Total iuran warga pada\nakhir rekap iuran bulanan: $totalIuranAkhir"
+
+                    if (totalIuranAkhir == "0") {
+                        main()
+                        subscribeToIuranTopic()
+                    }
+
                 }
             }
             .addOnFailureListener { exception ->
                 Log.w(TAG, "Error getting documents.", exception)
             }
 
+    }
+
+    fun subscribeToIuranTopic() {
+        FirebaseMessaging.getInstance().subscribeToTopic("Iuran")
+            .addOnCompleteListener { task ->
+                var msg = "Done"
+                if (!task.isSuccessful) {
+                    msg = "Failed"
+                }
+                println(msg)
+            }
+    }
+
+    fun main() {
+        MyFirebaseMessagingServices()
+    }
+
+    companion object {
+        private const val TAG = "read_data"
     }
 }

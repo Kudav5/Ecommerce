@@ -88,5 +88,7 @@ dependencies {
     //implementation 'org.apache.poi:poi:5.2.3' // Apache POI untuk memproses file Excel
     //implementation 'org.apache.poi:poi-ooxml:5.2.3' // Tambahkan jika perlu mendukung format .xlsx
 
+    implementation 'org.tensorflow:tensorflow-lite-task-vision:0.2.0'
+    implementation 'com.google.firebase:firebase-storage:21.0.0'
 
 }

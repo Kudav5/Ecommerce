@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg"
+    tools:context=".settings"
+    android:padding="16dp">
+
+    <!-- Title of the settings screen -->
+    <TextView
+        android:id="@+id/settingsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/settings"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/klikpanik"
+        android:text="@string/klik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBaseline="@id/setting1Title"
+        android:checked="true"/>
+
+    <!-- Switch for a specific setting -->
+    <TextView
+        android:id="@+id/setting1Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tombol_kepanikan"
+        android:layout_below="@id/settingsTitle"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp"/>
+
+    <!-- TextView and Switch for another setting -->
+    <TextView
+        android:id="@+id/setting2Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mode_malam"
+        android:layout_below="@id/setting1Title"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp"/>
+
+    <Switch
+        android:id="@+id/setting2Switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBaseline="@id/setting2Title"
+        android:checked="false"/>
+
+    <!-- Button to save settings -->
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_below="@id/setting2Title"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="32dp"/>
+
+    <!-- Button to reset settings -->
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:layout_below="@id/setting2Title"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="32dp"/>
+</RelativeLayout>
