@@ -1,39 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    tools:content=".PembukuanKeuangan"
-    android:padding="16dp">
+    android:padding="16dp"
+    tools:context=".PembukuanKeuangan">
 
+    <!-- EditText for Description -->
     <EditText
+        android:textSize="20sp"
         android:id="@+id/edit_text_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Description"
+        android:hint="@string/deskripsi"
         android:inputType="text" />
 
+    <!-- EditText for Amount -->
     <EditText
+        android:textSize="20sp"
         android:id="@+id/edit_text_amount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Amount"
+        android:hint="@string/amount"
         android:inputType="numberDecimal" />
 
+    <!-- Spinner for Transaction Type -->
     <Spinner
+        android:textSize="20sp"
         android:id="@+id/spinner_type"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:minWidth="48dp"
         android:entries="@array/transaction_types"
-        android:prompt="@string/choose_transaction_type" />
+        android:prompt="@string/piliht"/>
 
+    <!-- Button to Add Transaction -->
     <Button
         android:id="@+id/button_add_transaction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add Transaction" />
+        android:text="@string/add_transaction" />
 
+    <!-- ListView for Transactions -->
     <ListView
         android:id="@+id/list_view_transactions"
         android:layout_width="match_parent"
@@ -42,11 +52,12 @@
         android:divider="@android:color/darker_gray"
         android:dividerHeight="1dp" />
 
+    <!-- TextView for Balance -->
     <TextView
         android:id="@+id/text_view_balance"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Balance: $0.00"
+        android:text="@string/balance_0_00"
         android:textSize="18sp"
         android:textStyle="bold" />
 

@@ -75,4 +75,27 @@
     <string name="kelembaban">Kelembaban:</string>
     <string name="kualitas_udara">Kualitas Udara:</string>
     <string name="refresh_data">Refresh Data</string>
+    <string name="ambil_gambar">Ambil Gambar</string>
+    <string name="upload">Upload</string>
+    <string name="gambar">gambar</string>
+    <string name="jumlah_tagihan">Jumlah Tagihan:</string>
+    <string name="jatuh_tempo">Jatuh Tempo:</string>
+    <string name="bayar">Bayar</string>
+    <string name="ketik_informasi_siaran">Ketik informasi siaran</string>
+    <string name="kirim">Kirim</string>
+    <string name="type_a_message">Type a message</string>
+    <string name="send">Send</string>
+    <string name="detect_face">Detect Face</string>
+    <string name="wajah">Deteksi Wajah</string>
+    <string name="pengelolaan_lingkungan">Pengelolaan Lingkungan</string>
+    <string name="chatbot">Chat Bot</string>
+    <string name="payment">Pembayaran</string>
+    <string name="broadcast">Broadcast</string>
+    <string name="digitalisasi">Digitalisasi</string>
+
+    <string name="piliht">Pilih Transaksi</string>
+    <string name="add_transaction">Add Transaction</string>
+    <string name="amount">Amount</string>
+    <string name="balance_0_00">Balance: $0.00</string>
+    <string name="pilih_lokasi">pilih lokasi</string>
 </resources>

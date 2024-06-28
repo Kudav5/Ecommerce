@@ -1,10 +1,8 @@
 package id.co.kasrt.network
 
-import id.co.kasrt.SheetResponse
 import id.co.kasrt.model.ResponseUser
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
-import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.http.*
 import retrofit2.http.GET
@@ -13,7 +11,7 @@ import retrofit2.http.GET
 interface ApiService {
 
 
-    @GET("api/users")
+    @GET("api/users") // api setelah domain.com/
     fun getListUsers(@Query("page") page: String): Call<ResponseUser>
 
     @GET("api/users/{id")
