@@ -13,11 +13,6 @@
             android:title="@string/home"/>
 
         <item
-            android:id="@+id/nav_settings"
-            android:icon="@drawable/nav_setting"
-            android:title="@string/settings"/>
-
-        <item
             android:id="@+id/nav_about"
             android:icon="@drawable/nav_info"
             android:title="@string/about_us"/>
@@ -26,11 +21,42 @@
             android:id="@+id/nav_panik"
             android:icon="@drawable/ic_warning"
             android:title="@string/tombol_panik"/>
+
+        <item
+            android:id="@+id/broadcast"
+            android:icon="@drawable/ic_warning"
+            android:title="@string/broadcast"/>
+
+        <item
+            android:id="@+id/wajah"
+            android:icon="@drawable/ic_deteksi_wajah"
+            android:title="@string/wajah"/>
+
+        <item
+            android:id="@+id/lingkungan"
+            android:icon="@drawable/ic_termometer"
+            android:title="@string/pengelolaan_lingkungan"/>
+        <item
+            android:id="@+id/chatbot"
+            android:icon="@drawable/ic_bot"
+            android:title="@string/chatbot"/>
+        <item
+            android:id="@+id/payment"
+            android:icon="@drawable/ic_payment"
+            android:title="@string/payment"/>
+        <item
+            android:id="@+id/digitalisasi"
+            android:icon="@drawable/ic_wajah"
+            android:title="@string/digitalisasi"/>
     </group>
     <item
         android:title="">
 
         <menu>
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/nav_setting"
+                android:title="@string/settings"/>
             <item
                 android:id="@+id/nav_logout"
                 android:icon="@drawable/nav_off"

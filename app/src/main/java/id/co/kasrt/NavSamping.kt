@@ -50,12 +50,42 @@ class NavSamping : AppCompatActivity(), NavigationView.OnNavigationItemSelectedL
             R.id.nav_about -> {
                 supportFragmentManager.beginTransaction().replace(R.id.fragment_container, AboutFragment()).commit()
             }
+
+            R.id.nav_panik -> {
+                supportFragmentManager.beginTransaction().replace(R.id.fragment_container, PanikFragment()).commit()
+            }
+
+            R.id.broadcast -> {
+                supportFragmentManager.beginTransaction().replace(R.id.fragment_container, BroadcastFragment()).commit()
+            }
+
+            R.id.wajah -> {
+                supportFragmentManager.beginTransaction().replace(R.id.fragment_container, WajahFragment()).commit()
+            }
+
+            R.id.lingkungan -> {
+                supportFragmentManager.beginTransaction().replace(R.id.fragment_container, LingkunganFragment()).commit()
+            }
+
+            R.id.chatbot -> {
+                supportFragmentManager.beginTransaction().replace(R.id.fragment_container, ChatbotFragment()).commit()
+            }
+
+            R.id.payment -> {
+                supportFragmentManager.beginTransaction().replace(R.id.fragment_container, PaymentFragment()).commit()
+            }
+
+            R.id.digitalisasi -> {
+                supportFragmentManager.beginTransaction().replace(R.id.fragment_container, DigitFragment()).commit()
+            }
+
             R.id.nav_logout -> {
                 Toast.makeText(this, "Anda telah keluar", Toast.LENGTH_SHORT).show()
                 Firebase.auth.signOut()
                 val intent = Intent(this, akun::class.java)
                 startActivity(intent)
             }
+
         }
 
         drawerLayout.closeDrawer(GravityCompat.START)

@@ -9,7 +9,7 @@
         android:id="@+id/billAmountTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Jumlah Tagihan:"
+        android:text="@string/jumlah_tagihan"
         android:layout_margin="16dp"
         android:textSize="18sp"/>
 
@@ -17,7 +17,7 @@
         android:id="@+id/dueDateTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Jatuh Tempo:"
+        android:text="@string/jatuh_tempo"
         android:layout_below="@id/billAmountTextView"
         android:layout_margin="16dp"
         android:textSize="18sp"/>
@@ -26,7 +26,7 @@
         android:id="@+id/payButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bayar"
+        android:text="@string/bayar"
         android:layout_below="@id/dueDateTextView"
         android:layout_margin="16dp"/>
 
