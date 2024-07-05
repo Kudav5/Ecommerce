@@ -5,8 +5,11 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
-    <uses-feature android:name="android.hardware.camera" android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -21,6 +24,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NavigationDrawer"
         tools:targetApi="34">
+        <activity
+            android:name=".layarKetiga"
+            android:exported="false" />
+        <activity
+            android:name=".layarKedua"
+            android:exported="false" />
+        <activity
+            android:name=".homemain"
+            android:exported="true" />
+        <activity
+            android:name=".aboutUs"
+            android:exported="false" /> <!-- klo gbisa, providernya dihapus -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <meta-data
+            android:name="com.google.mlkit.vision.DEPENDENCIES"
+            android:value="face" /> <!-- To use multiple models: android:value="face,model2,model3" -->
         <activity
             android:name=".chatbot"
             android:exported="false" />
@@ -56,12 +84,8 @@
 
         <activity
             android:name=".NavSamping"
-            android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".settings"
             android:exported="false" />
@@ -76,7 +100,7 @@
             android:exported="false" />
         <activity
             android:name=".read_data"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Register"
             android:exported="true" />

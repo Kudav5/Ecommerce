@@ -8,15 +8,6 @@
     android:padding="16dp"
     tools:context=".read_data">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/ic_launcher_background"
-        android:scaleType="centerCrop"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="16dp"/>
-
     <TextView
         android:id="@+id/namdep"
         android:layout_width="wrap_content"
@@ -88,4 +79,20 @@
         android:text="@string/pemanfaatan_dari_iuran"
         android:textSize="18sp"/>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/dok"
+        android:layout_marginTop="30dp"
+        android:textSize="18sp"
+        android:text="@string/berdasarkan_nama_dokumen"
+        android:layout_height="wrap_content"/>
+
+    <Spinner
+        android:layout_marginTop="10dp"
+        android:id="@+id/pilihdokumen"
+        android:contentDescription="@string/pilih_dokumen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"/>
 </LinearLayout>

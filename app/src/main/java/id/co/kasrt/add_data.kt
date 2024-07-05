@@ -18,6 +18,7 @@ class add_data : AppCompatActivity() {
 
         val db = Firebase.firestore
 
+        val namdok: EditText = findViewById(R.id.namdok)
         val namdep: EditText = findViewById(R.id.namdep)
         val nambel: EditText = findViewById(R.id.nambel)
         val email: EditText = findViewById(R.id.email)
@@ -31,6 +32,7 @@ class add_data : AppCompatActivity() {
         val kirim: Button = findViewById(R.id.kirim)
 
         kirim.setOnClickListener {
+            val namaDok = namdok.text.toString().trim()
             val namaDepan = namdep.text.toString().trim()
             val namaBelakang = nambel.text.toString().trim()
             val emailText = email.text.toString().trim()
@@ -55,17 +57,20 @@ class add_data : AppCompatActivity() {
                 "Pemanfaatan Iuran" to pemanfaatanIuran
             )
 
-            // Add a new document with a generated ID
-            db.collection("laporan")
-                .add(laporan)
-                .addOnSuccessListener { documentReference ->
-                    Log.d(TAG, "DocumentSnapshot added with ID: ${documentReference.id}")
-                    Toast.makeText(this, "Laporan berhasil dikirim", Toast.LENGTH_SHORT).show()
-                }
-                .addOnFailureListener { e ->
-                    Log.w(TAG, "Error adding document", e)
-                    Toast.makeText(this, "Gagal mengirim laporan", Toast.LENGTH_SHORT).show()
-                }
+            if (namaDok.isNotEmpty()) {
+                db.collection("laporan").document(namaDok)
+                    .set(laporan)
+                    .addOnSuccessListener {
+                        Log.d(TAG, "DocumentSnapshot added with ID: $namaDok")
+                        Toast.makeText(this, "Laporan berhasil dikirim", Toast.LENGTH_SHORT).show()
+                    }
+                    .addOnFailureListener { e ->
+                        Log.w(TAG, "Error adding document", e)
+                        Toast.makeText(this, "Gagal mengirim laporan", Toast.LENGTH_SHORT).show()
+                    }
+            } else {
+                Toast.makeText(this, "Nama dokumen tidak boleh kosong", Toast.LENGTH_SHORT).show()
+            }
         }
 
     }

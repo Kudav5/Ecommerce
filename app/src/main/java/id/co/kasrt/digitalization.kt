@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
+import com.google.mlkit.vision.common.InputImage
 import java.io.ByteArrayOutputStream
 
 class digitalization : AppCompatActivity() {
@@ -50,6 +51,8 @@ class digitalization : AppCompatActivity() {
             uploadImageToFirebase()
         }
     }
+
+
 
     private fun dispatchTakePictureIntent() {
         val takePictureIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)

@@ -33,7 +33,7 @@
         android:id="@+id/setting1Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/tombol_kepanikan"
+        android:text="@string/tombol_kepanikan_contoh"
         android:layout_below="@id/settingsTitle"
         android:layout_alignParentStart="true"
         android:layout_marginTop="16dp"/>
@@ -53,6 +53,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
+
         android:layout_alignBaseline="@id/setting2Title"
         android:checked="false"/>
 

@@ -59,6 +59,7 @@
     <string name="tombol">Tombol</string>
     <string name="settings">Settings</string>
     <string name="tombol_kepanikan">Tombol Kepanikan</string>
+    <string name="tombol_kepanikan_contoh">Tombol Kepanikan (Testing)</string>
     <string name="klik">Klik</string>
     <string name="mode_malam">Mode Malam</string>
 
@@ -98,4 +99,17 @@
     <string name="amount">Amount</string>
     <string name="balance_0_00">Balance: $0.00</string>
     <string name="pilih_lokasi">pilih lokasi</string>
+    <string name="deteksi_wajah">Deteksi Wajah</string>
+    <string name="gambar_kas_rt">Gambar Kas RT</string>
+    <string name="deskripsi_about_us">Aplikasi ini dibuat untuk pengelolaan keuangan kas RT warga. Dengan aplikasi ini, data keuangan warga dapat dikelola dengan lebih mudah.</string>
+    <string name="kelola_warga">Kelola warga</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="next">NEXT</string>
+    <string name="previous">previous</string>
+    <string name="pilih_dokumen">Pilih Dokumen</string>
+    <string name="berdasarkan_nama_dokumen">Berdasarkan Nama Dokumen</string>
+    <string name="nama_dokumen">Nama Dokumen</string>
+    <string name="pembukuan_keuangan">Pembukuan Keuangan</string>
+    <string name="lainnya">Lainnya</string>
 </resources>

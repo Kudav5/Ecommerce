@@ -89,7 +89,7 @@ class Login : AppCompatActivity() {
                 if (task.isSuccessful) {
                     Toast.makeText(this, "Google sign in successful", Toast.LENGTH_SHORT).show()
                     // Navigate to your next activity here
-                    val intent = Intent(this, NavSamping::class.java)
+                    val intent = Intent(this, layarUtama::class.java)
                     startActivity(intent)
                 } else {
                     Toast.makeText(this, "Authentication Failed.", Toast.LENGTH_SHORT).show()

@@ -3,9 +3,14 @@ package id.co.kasrt
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import com.google.firebase.messaging.FirebaseMessaging
 
 
@@ -35,8 +40,7 @@ class layarUtama : AppCompatActivity() {
         val cardView_ubah: CardView = findViewById(R.id.ubah)
         val cardView_hapus: CardView = findViewById(R.id.hapus)
 
-        val cardView_warga: CardView = findViewById(R.id.datawarga)
-        val cardView_laporan: CardView = findViewById(R.id.laporan)
+        val nex = findViewById<Button>(R.id.next)
 
         cardView_orang.setOnClickListener {
             val intent = Intent(this, add_data::class.java)
@@ -56,11 +60,7 @@ class layarUtama : AppCompatActivity() {
             startActivity(intent)
         }
 
-        cardView_warga.setOnClickListener {
-            val intent = Intent(this, MainActivity2::class.java)
-            startActivity(intent)
-        }
-        cardView_laporan.setOnClickListener {
+        nex.setOnClickListener {
             val intent = Intent(this, NavSamping::class.java)
             startActivity(intent)
         }
@@ -68,6 +68,13 @@ class layarUtama : AppCompatActivity() {
     // Fungsi untuk menampilkan Toast
     private fun showToast(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+    }
+
+    private fun logout() {
+        Toast.makeText(this, "Anda telah keluar", Toast.LENGTH_SHORT).show()
+        Firebase.auth.signOut()
+        val intent = Intent(this, akun::class.java)
+        startActivity(intent)
     }
 
 }
