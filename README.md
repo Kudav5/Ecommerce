@@ -1,6 +1,6 @@
-awalnya nama proyek Ecommerce diganti jadi kasrt
+# Awalnya nama proyek Ecommerce diganti jadi kasrt
 
-Kelompok 4
+# Kelompok 4
 
 ~~~
 Nama : Muhammad zidan Fadillah
