@@ -3,7 +3,7 @@
 # Kelompok 4
 
 ~~~
-Nama : Muhammad zidan Fadillah
+Nama : Muhammad Zidan Fadillah
 Kelas: TI.22.A.2
 Nim  : 312210277
 
@@ -11,7 +11,7 @@ Nama : Muhammad Verdy Hasan
 Kelas: TI.22.A.2
 Nim  : 312210214
 
-Nama : Kumara davin Valerian
+Nama : Kumara Davin Valerian
 Kelas: TI.22.A.2
 Nim  : 312210192
 ~~~
